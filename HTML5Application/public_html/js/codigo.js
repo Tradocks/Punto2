@@ -1,10 +1,9 @@
-
-$(document).ready(function(){
-    var a=0; 
-    var contador =0;
-    var por=0;
-   
-    $("#fmr1").submit(function (parametro){
+ var a=""; 
+ var contador =0;
+ var por=0;
+$(document).ready(function(){   
+    
+    $("#frm1").submit(function (parametro){
         parametro.preventDefault();
         
         a=$("#lista1").val();
@@ -14,7 +13,7 @@ $(document).ready(function(){
         
         a=$("#lista2").val();
         if(a === "A"){
-            contador = contador +1;
+            contador = contador +1;          
         }
         
         a=$("#lista3").val();
@@ -55,13 +54,10 @@ $(document).ready(function(){
         a=$("#lista10").val();
         if(a === "E") {
             contador = contador +1;
+            
         }
         
         por = (contador*100)/10;
-    
-       alert("Su resultado es: "+contador "de 10" +por"%");
-    
-    });    
- 
- 
+        alert("Su resultado es: "+ contador +" de 10 (" + por +"%)");          
+    });   
 });
